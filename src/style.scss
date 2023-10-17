@@ -1,0 +1,18 @@
+video {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+// The following SCSS block to hide the current time and
+// seek/scrubber bar in Chrome for live streams. Safari hides
+// these for a live stream by default. This does not work in Firefox
+// since there does not appear to be a way to style the shadow DOM
+// elements there.
+
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display {
+    display: none;
+}
